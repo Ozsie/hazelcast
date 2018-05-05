@@ -9,5 +9,5 @@ import java.util.*
 @Service
 class UUIDCache {
     @Cacheable(value = ["map"], key = "#key")
-    fun getUUID(key: String) = UUID.randomUUID().also { println("Generated $it") }
+    fun getUUID(key: String): UUID? = UUID.randomUUID().also { println("Generated $it") }
 }

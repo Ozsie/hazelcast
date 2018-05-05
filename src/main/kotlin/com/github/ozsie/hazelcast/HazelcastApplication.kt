@@ -65,7 +65,7 @@ fun getUUIDNoClass(key: String): UUID {
 @Service
 class Cache {
     @Cacheable(value = ["map"], key = "#key")
-    fun getUUID(key: String) = UUID.randomUUID().also { println("Generated $it") }
+    fun getUUID(key: String): UUID? = UUID.randomUUID().also { println("Generated $it") }
 }
 
 fun main(args: Array<String>) {
